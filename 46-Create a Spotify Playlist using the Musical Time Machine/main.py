@@ -2,6 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 import os
 
+#Import class from spotify_suthentication.py:
+from spotify_authentication import sp, user_id
+print(user_id)
+
+
 #Take YYYY-MM-DD formatted date as input:
 date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ") #enter 2012-11-09
 #-----------------------------------------------------------------------------------------------------------------------------
