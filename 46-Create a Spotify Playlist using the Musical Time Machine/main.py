@@ -9,6 +9,7 @@ date = input("Which year do you want to travel to? Type the date in this format 
 response = requests.get("https://www.billboard.com/charts/hot-100/" + date) #becomes https://www.billboard.com/charts/hot-100/2012-11-09/
 # print(response.text)
 
+#Create soup object to get hold of the required info from the URL as a list:
 soup = BeautifulSoup(response.text, 'html.parser')
 song_names = soup.find_all(name="h3", id="title-of-a-story", class_="a-no-trucate")
 # print(song_names)
