@@ -56,6 +56,9 @@ print(song_urls)
 playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", public=False)
 print(playlist)
 
+#Add all items(urls) to playlist:
+sp.playlist_add_items(playlist_id=playlist["id"], items=song_urls)
+
 
 
 
