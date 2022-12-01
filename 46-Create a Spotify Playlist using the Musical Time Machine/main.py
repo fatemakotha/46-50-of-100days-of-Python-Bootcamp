@@ -4,7 +4,7 @@ import os
 
 #Import class from spotify_suthentication.py:
 from spotify_authentication import sp, user_id
-print(user_id)
+# print(user_id)
 
 
 #Take YYYY-MM-DD formatted date as input:
@@ -33,10 +33,24 @@ for song in song_names:
 print(final_song_list)
 #-----------------------------------------------------------------------------------------------------------------------------
 
-# Spotify credentials:
-ClientID = os.environ.get("ID")
-ClientSecret = os.environ.get("Secret")
+song_urls = []
+year = date.split("-")[0]
+print(year)
 
+#Create a list of song_urls:
+song_urls = []
+for song in final_song_list:
+    # result = sp.search(q=f"track:{song} year:{year}", type="track")
+    # print(f"track:{song} year:{year}")
+    result = sp.search(q=f"track:{song} year:{year}", type="track")
+    # print(result["tracks"]["items"][0]["uri"])
+    try:
+        url = result["tracks"]["items"][0]["uri"]
+        song_urls.append(url)
+    except IndexError:
+        print(f"{song} doesn't exist in Spotify. Skipped.")
+
+print(song_urls)
 
 
 
