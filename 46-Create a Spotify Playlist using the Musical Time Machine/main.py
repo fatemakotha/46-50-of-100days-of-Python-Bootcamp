@@ -52,6 +52,10 @@ for song in final_song_list:
 
 print(song_urls)
 
+#Create a playlist with a custom name:
+playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", public=False)
+print(playlist)
+
 
 
 
