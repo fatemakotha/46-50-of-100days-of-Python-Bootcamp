@@ -1,3 +1,5 @@
+import os
+
 from bs4 import BeautifulSoup
 import requests
 import pprint
@@ -29,3 +31,9 @@ actual_price = float(price_dollars + price_cents)
 print(actual_price)
 print(type(actual_price))
 
+#Set email ID and password:
+my_email = os.environ.get("EMAIL")
+my_app_pass = os.environ.get("PASSWORD")
+
+print(my_email)
+print(my_app_pass)
