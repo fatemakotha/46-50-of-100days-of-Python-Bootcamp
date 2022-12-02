@@ -34,6 +34,9 @@ print(type(actual_price))
 #Set email ID and password:
 my_email = os.environ.get("EMAIL")
 my_app_pass = os.environ.get("PASSWORD")
+# print(my_email)
+# print(my_app_pass)
 
-print(my_email)
-print(my_app_pass)
+#Set BUY price:
+BUY_PRICE = 200
+
