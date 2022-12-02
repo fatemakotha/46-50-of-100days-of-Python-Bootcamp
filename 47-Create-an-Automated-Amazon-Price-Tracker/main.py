@@ -20,11 +20,17 @@ soup = BeautifulSoup(response.text, "lxml")
 # pp = pprint.PrettyPrinter()
 # pp.pprint(soup)
 
+#Get hold of the name/title of the item:
+title = soup.find(name="span", id="productTitle", class_="a-size-large product-title-word-break").getText()
+title.strip()
+print(title)
+
 #Get hold of the price and convert that into an integer:
 price_dollars = soup.find(name="span", class_="a-price-whole").getText()
 print(price_dollars) #its a string
 price_cents = soup.find(name="span", class_="a-price-fraction").getText()
 print(price_cents) #its a string
+
 
 #Calculate the actual price by adding the dollars and cents:
 actual_price = float(price_dollars + price_cents)
@@ -40,3 +46,6 @@ my_app_pass = os.environ.get("PASSWORD")
 #Set BUY price:
 BUY_PRICE = 200
 
+#Set loop so that when price is lower than BUY_PRICE an email is sent out:
+# if actual_price < BUY_PRICE:
+#     message = f"{}"
