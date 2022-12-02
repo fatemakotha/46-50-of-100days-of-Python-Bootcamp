@@ -17,3 +17,10 @@ soup = BeautifulSoup(response.text, "lxml")
 # pp = pprint.PrettyPrinter()
 # pp.pprint(soup)
 
+#Get hold of the price and convert that into an integer:
+price = soup.find(name="span", class_="a-price-whole")
+print(price) #<span class="a-price-whole">99<span class="a-price-decimal">.</span></span>
+price = price.text #99.
+price = price.strip(".")
+price = int(price)
+print(price)
