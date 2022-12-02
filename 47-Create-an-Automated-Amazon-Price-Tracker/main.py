@@ -59,6 +59,6 @@ if actual_price < BUY_PRICE:
         connection.sendmail(
             from_addr=my_email,
             to_addrs="fatema.alam.kotha@gmail.com",
-            msg=f"The price is for {title} is now {actual_price}"
+            msg=f"The price is for {title} is now {actual_price}! GRAB one now!!"
         )
         connection.close()
