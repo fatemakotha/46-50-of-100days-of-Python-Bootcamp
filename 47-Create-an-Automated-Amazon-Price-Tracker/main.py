@@ -22,5 +22,5 @@ price = soup.find(name="span", class_="a-price-whole")
 print(price) #<span class="a-price-whole">99<span class="a-price-decimal">.</span></span>
 price = price.text #99.
 price = price.strip(".")
-price = int(price)
+price = float(price)
 print(price)
