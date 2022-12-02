@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pprint
+import smtplib
 
 import lxml
 
@@ -27,3 +28,4 @@ print(price_cents) #its a string
 actual_price = float(price_dollars + price_cents)
 print(actual_price)
 print(type(actual_price))
+
