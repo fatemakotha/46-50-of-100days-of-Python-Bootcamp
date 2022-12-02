@@ -18,9 +18,12 @@ soup = BeautifulSoup(response.text, "lxml")
 # pp.pprint(soup)
 
 #Get hold of the price and convert that into an integer:
-price = soup.find(name="span", class_="a-price-whole")
-print(price) #<span class="a-price-whole">99<span class="a-price-decimal">.</span></span>
-price = price.text #99.
-price = price.strip(".")
-price = float(price)
-print(price)
+price_dollars = soup.find(name="span", class_="a-price-whole").getText()
+print(price_dollars) #its a string
+price_cents = soup.find(name="span", class_="a-price-fraction").getText()
+print(price_cents) #its a string
+
+#Calculate the actual price by adding the dollars and cents:
+actual_price = float(price_dollars + price_cents)
+print(actual_price)
+print(type(actual_price))
