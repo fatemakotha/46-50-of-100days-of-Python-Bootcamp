@@ -29,6 +29,7 @@ print(dates)
 
 print("__________________________________________________________________________________________")
 
+# Extract all events as a list:
 events = []
 extract_events = driver.find_elements(By.CSS_SELECTOR, ".event-widget a")
 # print(extract_events) #[<selenium.webdriver.remote.webelement.WebElement (session="8d8106ff3d360a7e2480bba38ecf0aae", element="a5cb1f3e-14e9-4fd7-b95f-a17da7fd0fa9")>, <selenium.webdriver.remote.webelement.W
