@@ -37,4 +37,13 @@ for each_title in extract_events:
 print(events)
 
 
+#Create a dictionary like this: {0: {'time': '12-07', 'name': 'NZPUG-Auckland Coding Evening'}, 1: {'time': '12-09', 'name': 'PyCon Bolivia 2022'}, 2: {'time': '12-17', 'name': 'Python Pizza Holguín'}, 3: {'time': '12-21', 'name': 'An Introduction to Model Drift - PyLadies A
+events_dictio = {}
+for n in range(len(events)):
+    events_dictio[n] = {
+        "time": dates[n],
+        "name": events[n],
+    }
+
+print(events_dictio)
 
