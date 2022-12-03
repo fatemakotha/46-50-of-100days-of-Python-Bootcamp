@@ -27,13 +27,14 @@ driver.close() #Closes the active tab
 
 
 #Get hold of the price using CSS_SELECTORS:
-new_driver = webdriver.Chrome()
-new_driver = new_driver.get("https://www.python.org/")
+# new_driver = webdriver.Chrome()
+# new_driver = new_driver.get("https://www.python.org/")
 #Lets say we have an anchor tag inside a div named "document-widget:
 # new_driver.find_element(By.CSS_SELECTOR, ".document-widget a")
 
-
-
+#Get hold of the price using X_PATH:
+xxxx = driver.find_element(By.XPATH, '//*[@id="corePriceDisplay_desktop_feature_div"]/div[1]/span[2]/span[1]') #copy x_path by right clicking code in html
+print(xxxx.text)
 
 
 
