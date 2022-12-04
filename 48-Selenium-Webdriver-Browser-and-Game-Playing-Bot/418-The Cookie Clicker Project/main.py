@@ -8,3 +8,8 @@ from selenium.webdriver.common.keys import Keys
 
 
 
+#Open the desired website:
+options = webdriver. ChromeOptions()
+options. add_experimental_option("detach", True)
+driver = webdriver.Chrome(chrome_options=options)
+driver.get("http://orteil.dashnet.org/experiments/cookie/")
