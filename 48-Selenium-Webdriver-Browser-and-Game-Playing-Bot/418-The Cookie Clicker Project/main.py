@@ -15,6 +15,6 @@ options. add_experimental_option("detach", True)
 driver = webdriver.Chrome(chrome_options=options)
 driver.get("http://orteil.dashnet.org/experiments/cookie/")
 
-#Click on the cookie
+#Get cookie to click on
 cookie = driver.find_element(By.ID, "cookie")
-cookie.click()
+
