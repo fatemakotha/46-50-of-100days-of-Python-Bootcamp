@@ -42,11 +42,12 @@ timeout = time.time() + 5
 five_min = time.time() + 60*5 # 5minute
 # print(five_min)
 
-#Set up the mechanism:_________________________________________________________________________
+#Set up the mechanism:_______________________________________________________________________________________________________________________________________________________________________________________________
 cookie.click()
-
+#Get all upgrade <b> tags
 all_prices = driver.find_elements(By.CSS_SELECTOR, "#store b")
 item_prices = []
+#Convert <b> text into an integer price list:
 for price in all_prices:
     element_text = price.text
     if element_text != "":
