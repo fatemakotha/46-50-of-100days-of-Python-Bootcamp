@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 #To press enter and everything:
 from selenium.webdriver.common.keys import Keys
+import time
 
 
 
@@ -13,3 +14,5 @@ options = webdriver. ChromeOptions()
 options. add_experimental_option("detach", True)
 driver = webdriver.Chrome(chrome_options=options)
 driver.get("http://orteil.dashnet.org/experiments/cookie/")
+
+#Click on the cookie
