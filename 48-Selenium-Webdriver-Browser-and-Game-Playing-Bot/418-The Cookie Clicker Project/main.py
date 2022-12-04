@@ -66,3 +66,8 @@ print(money_element)
 if "," in money_element:
     money_element = money_element.replace(",", "")
 cookie_count = int(money_element)
+#Find upgrades that we can currently afford:
+affordable_upgrades = {}
+for cost, id in cookie_upgrades.items():
+    if cookie_count > cost:
+        affordable_upgrades[cost] = id
