@@ -17,6 +17,7 @@ article_count = driver.find_element(By.CSS_SELECTOR, "#articlecount a")
 ##How to click on an element:
 # article_count.click() #clicks and goes to the statictics page
 
+#Find element using link tag:
 wikipedia_info = driver.find_element(By.LINK_TEXT, "Wikipedia")
 print(wikipedia_info.text)
 wikipedia_info.click()
