@@ -16,7 +16,7 @@ driver = webdriver.Chrome(chrome_options=options)
 driver.get("http://orteil.dashnet.org/experiments/cookie/")
 
 #Get cookie to click on
-# cookie = driver.find_element(By.ID, "cookie")
+cookie = driver.find_element(By.ID, "cookie")
 
 
 #Get upgrade item ids:
@@ -38,4 +38,19 @@ print(item_ids) #['buyCursor', 'buyGrandma', 'buyFactory', 'buyMine', 'buyShipme
 
 #Set time variables
 timeout = time.time() + 5
+# print(timeout)
 five_min = time.time() + 60*5 # 5minute
+# print(five_min)
+
+#Set up the mechanism:_________________________________________________________________________
+cookie.click()
+
+all_prices = driver.find_elements(By.CSS_SELECTOR, "#store b")
+item_prices = []
+for price in all_prices:
+    element_text = price.text
+    if element_text != "":
+        cost = int(element_text.split("-")[1].strip().replace(",", ""))
+        item_prices.append(cost)
+
+print(item_prices)
