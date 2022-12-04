@@ -28,5 +28,7 @@ article_count = driver.find_element(By.CSS_SELECTOR, "#articlecount a")
 search = driver.find_element(By.NAME, "search")
 print(search) #<selenium.webdriver.remote.webelement.WebElement (session="c9d583b27c94aa2facc99e092c09fdd3", element="c2850bf5-857e-40eb-9997-b763ac508782")>
 search.send_keys("Neymar jr")
-go_button = driver.find_element(By.NAME, "go")
-go_button.click()
+# go_button = driver.find_element(By.NAME, "go")
+# go_button.click()
+#--------------OR-----------------
+search.send_keys(Keys.ENTER)
