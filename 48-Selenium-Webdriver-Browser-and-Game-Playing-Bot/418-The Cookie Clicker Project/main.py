@@ -36,4 +36,6 @@ for item in items:
     # print(attribute)
 print(item_ids) #['buyCursor', 'buyGrandma', 'buyFactory', 'buyMine', 'buyShipment', 'buyAlchemy lab', 'buyPortal', 'buyTime machine', 'buyElder Pledge']
 
-
+#Set time variables
+timeout = time.time() + 5
+five_min = time.time() + 60*5 # 5minute
