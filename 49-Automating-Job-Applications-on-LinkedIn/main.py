@@ -10,7 +10,7 @@ import time
 
 username = os.environ.get("Lk_email")
 password = os.environ.get("Lk_password")
-
+PHONE = "01210121012"
 
 #LOGGING INTO LINKED IN USING THE LINK : -----------------------------------------------------------------------------------------------------------
 #Open the desired website:
@@ -22,7 +22,7 @@ driver.get("https://www.linkedin.com/jobs/search/?currentJobId=3372310590&f_AL=t
 signin_btn = driver.find_element(By.CLASS_NAME, "nav__button-secondary")
 signin_btn.click()
 ##Wait for the next page to load.
-# time.sleep(5) **************************************
+time.sleep(5)
 #Fill the username:
 user = driver.find_element(By.ID, "username")
 user.send_keys(username)
@@ -32,8 +32,20 @@ passw.send_keys(password)
 #Click sign in button:
 submit = driver.find_element(By.CSS_SELECTOR, ".login__form_action_container button")
 submit.click()
-#------------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------
 
-#Click easy-apply button:
-easyapply_btn = driver.find_element(By.CSS_SELECTOR, ".mt5 .display-flex button")
-easyapply_btn.click()
+
+#CLICK THE EASY-APPLY BUTTON: -----------------------------------------------------------------------------------------------------------
+# time.sleep(5)
+apply_button = driver.find_element(By.CSS_SELECTOR, ".jobs-s-apply button")
+apply_button.click()
+
+#If application requires phone number and the field is empty, then fill in the number.
+time.sleep(5)
+phone = driver.find_element(By.CLASS_NAME, "fb-single-line-text__input")
+if phone.text == "":
+    phone.send_keys(PHONE)
+
+#Submit the application
+submit_button = driver.find_element(By.CSS_SELECTOR, "footer button")
+submit_button.click()
