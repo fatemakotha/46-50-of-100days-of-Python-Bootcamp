@@ -11,6 +11,6 @@ options = webdriver. ChromeOptions()
 options. add_experimental_option("detach", True)
 driver = webdriver.Chrome(chrome_options=options)
 driver.get("https://www.linkedin.com/jobs/search/?currentJobId=3372310590&f_AL=true&f_E=1&keywords=python%20intern")
-
+#Click on sign-in:
 signin_btn = driver.find_element(By.CLASS_NAME, "nav__button-secondary")
 signin_btn.click()
