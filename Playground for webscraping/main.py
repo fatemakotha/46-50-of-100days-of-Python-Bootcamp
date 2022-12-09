@@ -29,5 +29,9 @@ print("-------------------------------------------------------------------------
 #FINDING A BUTTOM:_______________________2
 #<div class="options-bar-container do-not-print">
 #   <a href="https://psfmember.org/civicrm/contribute/transact/?reset=1&id=2" class="donate-button"> Donate </a>
-donate_button = driver.find_element(By.CSS_SELECTOR, ".options-bar-container a") #Use the first word of class to target as CSS ***
-donate_button.click()
+#Uncomment later ******:
+# donate_button = driver.find_element(By.CSS_SELECTOR, ".options-bar-container a") #Use the first word of class to target as CSS ***Co
+# donate_button.click() #WORKS
+# donate_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar-container .donate-button") #Use first words of 2 classes
+# donate_button_x.click() #WORKS
+print("-------------------------------------------------------------------------------------------------------------------------------")
