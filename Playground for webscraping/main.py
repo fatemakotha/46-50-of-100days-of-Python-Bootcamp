@@ -7,6 +7,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 import os
 import time
+import urllib
+
 
 #Make sure the window stays open unless specifically instructed to close or quit:
 options = webdriver. ChromeOptions()
@@ -74,11 +76,21 @@ print("-------------------------------------------------------------------------
 #       <span></span>
 #           <label class="screen-reader-text" for="id-search-field"> Search This Site </label>
 #               <input id="id-search-field" name="q" type="search" role="textbox" class="search-field" placeholder="Search" value tabindex="1">
+
 textbox = driver.find_element(By.CSS_SELECTOR, ".search-the-site fieldset .search-field") #*****
 textbox.send_keys("Look for xyz") #Works
+
 # textbox_x = driver.find_element(By.CSS_SELECTOR, ".screen-reader-text input")
 # textbox_x.send_keys("hhhh") #DOES NOT WORK
 # textbox_x = driver.find_element(By.CSS_SELECTOR, ".screen-reader-text .search-field")
 # textbox_x.send_keys("hhhh")#DOES NOT WORK
 #print("-------------------------------------------------------------------------------------------------------------------------------")
 
+#FINDING AN IMAGE:_______________________4
+# get the image source
+img = driver.find_element(By.CLASS_NAME, "python-logo")
+# src = img.get_attribute('src')
+# # download the image
+# urllib.urlretrieve(src, "python.png")
+with open("python-img.png", "wb") as f:
+    f.write(img.screenshot_as_png)
