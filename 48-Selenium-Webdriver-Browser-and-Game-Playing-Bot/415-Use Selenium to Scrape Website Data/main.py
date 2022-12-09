@@ -12,7 +12,7 @@ driver.get("https://www.python.org/")
 # driver.close()
 
 title = driver.find_element(By.CSS_SELECTOR, ".shrubbery h2") #gets the tite "Latest News"
-print(title.text) #Latest News
+print(f"title is {title.text}") #Latest News
 
 # news = driver.find_element(By.CSS_SELECTOR, ".shrubbery .menu")
 # print(news.text)
