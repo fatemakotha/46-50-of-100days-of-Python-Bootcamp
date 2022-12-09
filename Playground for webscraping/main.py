@@ -36,11 +36,11 @@ print("-------------------------------------------------------------------------
 #<div class="options-bar-container do-not-print">
 #   <a href="https://psfmember.org/civicrm/contribute/transact/?reset=1&id=2" class="donate-button"> Donate </a>
 #Uncomment later ******:
-# donate_button = driver.find_element(By.CSS_SELECTOR, ".options-bar-container a") #Use the first word of class to target as CSS ***Co
-# donate_button.click() #WORKS
-# donate_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar-container .donate-button") #Use first words of 2 classes
-# donate_button_x.click() #WORKS
-#print("-------------------------------------------------------------------------------------------------------------------------------")
+donate_button = driver.find_element(By.CSS_SELECTOR, ".options-bar-container a") #Use the first word of class to target as CSS ***Co
+donate_button.click() #WORKS
+donate_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar-container .donate-button") #Use first words of 2 classes
+donate_button_x.click() #WORKS
+print("-------------------------------------------------------------------------------------------------------------------------------")
 
 
 
@@ -53,21 +53,16 @@ print("-------------------------------------------------------------------------
 #       <fieldset title="Search Python.org">
 #           <input id="id-search-field" name="q" type="search" role="textbox" class="search-field" placeholder="Search" value tabindex="1">
 #           <button type="submit" name="submit" class="search-button" title="Submit this Search" tabindex="3">
-# go_button = driver.find_element(By.CSS_SELECTOR, ".screen-reader-text input button")
-# go_button.click() #DOES NOT WORK
+# go_button = driver.find_element(By.CSS_SELECTOR, ".screen-reader-text input button") #DOES NOT WORK
 # go_button = driver.find_element(By.CSS_SELECTOR, ".options-bar .jump-to-menu .search-the-site fieldset button") #DOES NOT WORK
-# go_button.click()
 # go_button = driver.find_element(By.CSS_SELECTOR, ".options-bar .jump-to-menu .search-the-site button") #DOES NOT WORK
-# go_button.click()
 # go_button = driver.find_element(By.CSS_SELECTOR, ".options-bar .jump-to-menu .search-the-site .search-button") #DOES NOT WORK
-# go_button.click()
-# UNCOMMENT LATER **************
-# go_button = driver.find_element(By.CLASS_NAME, "search-button") #DOES NOT WORK
-# go_button.click() #worksss **
-# go_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar form fieldset button") #workssss ***
-# go_button_x.click() #worksss **
-# go_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar form fieldset .search-button") #workssss ***
-# go_button_x.click() #worksss **
+go_button = driver.find_element(By.CLASS_NAME, "search-button") #DOES NOT WORK
+go_button.click() #worksss **
+go_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar form fieldset button") #workssss ***
+go_button_x.click() #worksss **
+go_button_x = driver.find_element(By.CSS_SELECTOR, ".options-bar form fieldset .search-button") #workssss ***
+go_button_x.click() #worksss **
 print("-------------------------------------------------------------------------------------------------------------------------------")
 
 #FINDING A TEXTBOX TO TYPE IN:_______________________4
